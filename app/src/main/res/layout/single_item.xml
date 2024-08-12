@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recipeItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding8">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/recipeImageView"
+        android:layout_width="@dimen/ImageSize"
+        android:layout_height="@dimen/ImageSize"
+        android:scaleType="centerCrop"
+        android:src="@drawable/recipe_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CornerImageShape" />
+
+    <TextView
+        android:id="@+id/recipeTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin8"
+        android:textSize="@dimen/textSize24"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/recipeImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Recipe Title" />
+
+    <TextView
+        android:id="@+id/recipeHeaderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin8"
+        android:layout_marginTop="@dimen/margin4"
+        android:textColor="@color/subTitleColor"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/recipeImageView"
+        app:layout_constraintTop_toBottomOf="@id/recipeTitleTextView"
+        tools:text="Recipe Header" />
+
+    <TextView
+        android:id="@+id/recipeTimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin4"
+        android:layout_marginTop="@dimen/margin8"
+        android:drawablePadding="@dimen/padding4"
+        android:textSize="@dimen/textSize16"
+        app:drawableStartCompat="@drawable/ic_timer"
+        app:layout_constraintStart_toEndOf="@id/recipeImageView"
+        app:layout_constraintTop_toBottomOf="@id/recipeHeaderTextView"
+        tools:text="30 min" />
+
+
+    <TextView
+        android:id="@+id/recipeCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin4"
+        android:layout_marginTop="@dimen/margin8"
+        android:drawablePadding="@dimen/padding4"
+        android:textSize="@dimen/textSize16"
+        app:drawableStartCompat="@drawable/ic_calorie"
+        app:layout_constraintStart_toEndOf="@id/recipeTimerTextView"
+        app:layout_constraintTop_toBottomOf="@id/recipeHeaderTextView"
+        tools:text="200 cal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

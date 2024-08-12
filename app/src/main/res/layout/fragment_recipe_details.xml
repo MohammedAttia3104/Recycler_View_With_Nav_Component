@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin16"
+    android:layout_marginTop="@dimen/margin16"
+    tools:context=".ui.recipe.RecipeDetailsFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/recipeDetailsImageView"
+        android:layout_width="@dimen/ImageSize"
+        android:layout_height="@dimen/ImageSize"
+        android:scaleType="centerCrop"
+        android:src="@drawable/recipe_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CornerImageShape" />
+
+    <TextView
+        android:id="@+id/recipeDetailsTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin8"
+        android:layout_marginTop="@dimen/margin8"
+        android:gravity="center"
+        android:textSize="@dimen/textSize24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recipeDetailsImageView"
+        tools:text="Recipe Title" />
+
+    <TextView
+        android:id="@+id/recipeDetailsDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin4"
+        android:textColor="@color/subTitleColor"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recipeDetailsTitleTextView"
+        tools:text="Recipe Details Description" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
